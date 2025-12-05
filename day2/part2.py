@@ -1,6 +1,6 @@
 def has_repeating_pattern(s):
     n = len(s)
-    for i in range(1, n):
+    for i in range(1, n//2):
         if n % i == 0 and s == s[:i] * (n // i):
             return True
     return False
@@ -26,3 +26,5 @@ with open('./input_day2.txt') as file:
     input_text = file.read()
 
 print(sum_invalid_ids(input_text))
+
+
